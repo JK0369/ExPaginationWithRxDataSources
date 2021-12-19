@@ -17,7 +17,23 @@ import SnapKit
 class PhotoViewController: BaseViewController, ReactorKit.View {
   // MARK: Constants
   private enum Metric {
-    static let collectionViewSpacing = 8.0
+    private static let numberOfColumns = 3.0
+    private static let numberOfRows = 7.0
+    static let collectionViewItemSize = CGSize(
+      width: (
+        UIScreen.main.bounds.width
+        - collectionViewSpacing
+        * (numberOfColumns + 1)
+        - Self.collectionViewSpacing
+      ) / numberOfColumns,
+      height: (
+        UIScreen.main.bounds.height
+        - collectionViewSpacing
+        * (numberOfRows + 1)
+        - Self.collectionViewSpacing
+      ) / numberOfRows
+    )
+    static let collectionViewSpacing = 4.0
     static let collectionViewContentInset: UIEdgeInsets = UIEdgeInsets(
       top: 4,
       left: 4,
@@ -35,6 +51,7 @@ class PhotoViewController: BaseViewController, ReactorKit.View {
   private let photoCollectionView = UICollectionView(
     frame: .zero,
     collectionViewLayout: UICollectionViewFlowLayout().then {
+      $0.itemSize = Metric.collectionViewItemSize
       $0.minimumLineSpacing = Metric.collectionViewSpacing
       $0.minimumInteritemSpacing = Metric.collectionViewSpacing
       $0.scrollDirection = .vertical
@@ -53,10 +70,7 @@ class PhotoViewController: BaseViewController, ReactorKit.View {
   override func configureLayout() {
     self.view.addSubview(photoCollectionView)
     self.photoCollectionView.snp.makeConstraints {
-      $0.centerY.centerX.equalToSuperview()
-      $0.height.equalToSuperview().inset(Metric.collectionViewVerticalSpacing)
-      $0.left.equalTo(view.safeAreaLayoutGuide).offset(Metric.collectionViewSpacing)
-      $0.right.equalTo(view.safeAreaLayoutGuide).offset(-Metric.collectionViewSpacing)
+      $0.edges.equalToSuperview()
     }
   }
   
