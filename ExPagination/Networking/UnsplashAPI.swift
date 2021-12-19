@@ -8,7 +8,7 @@
 import Moya
 
 enum UnsplashAPI {
-  case getPhotos(page: Int)
+  case getPhotos(photoRequest: PhotoRequest)
 }
 
 // MARK: UnsplashAPI+TargetType
@@ -20,6 +20,6 @@ extension UnsplashAPI: Moya.TargetType {
   var task: Task { self.getTask() }
   var headers: [String : String]? { [
     "Content-Type": "application/json",
-    "client_id": APIKey.unsplashAccessKey
+    "Authorization": "Client-ID \(APIKey.unsplashAccessKey)"
   ] }
 }

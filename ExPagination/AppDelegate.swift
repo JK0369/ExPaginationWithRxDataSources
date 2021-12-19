@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
   ) -> Bool {
     window = UIWindow(frame: UIScreen.main.bounds)
-    let photoViewRacrtor = PhotoViewReactor()
+    let photoViewRacrtor = PhotoViewReactor(provider: ServiceProvider())
     let photoViewController = PhotoViewController(reactor: photoViewRacrtor)
     let navigationController = UINavigationController(rootViewController: photoViewController)
     window?.rootViewController = navigationController

@@ -34,6 +34,8 @@
 		4A7F3A83276EEA55005D361F /* Array+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7F3A82276EEA55005D361F /* Array+extension.swift */; };
 		4A7F3A88276EEBB2005D361F /* API+Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7F3A87276EEBB2005D361F /* API+Key.swift */; };
 		4A7F3A8C276EED3B005D361F /* ServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7F3A8B276EED3B005D361F /* ServiceProvider.swift */; };
+		4A7F3A8E276EEF38005D361F /* PhotoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7F3A8D276EEF38005D361F /* PhotoService.swift */; };
+		4A7F3A90276EEF70005D361F /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7F3A8F276EEF70005D361F /* BaseService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +87,8 @@
 		4A7F3A82276EEA55005D361F /* Array+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+extension.swift"; sourceTree = "<group>"; };
 		4A7F3A87276EEBB2005D361F /* API+Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API+Key.swift"; sourceTree = "<group>"; };
 		4A7F3A8B276EED3B005D361F /* ServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProvider.swift; sourceTree = "<group>"; };
+		4A7F3A8D276EEF38005D361F /* PhotoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoService.swift; sourceTree = "<group>"; };
+		4A7F3A8F276EEF70005D361F /* BaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
 		6008C54CCB7B20960F118949 /* Pods-ExPagination.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExPagination.debug.xcconfig"; path = "Target Support Files/Pods-ExPagination/Pods-ExPagination.debug.xcconfig"; sourceTree = "<group>"; };
 		BFD0CCEEA56A1055CC6C41FD /* Pods-ExPagination.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExPagination.release.xcconfig"; path = "Target Support Files/Pods-ExPagination/Pods-ExPagination.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -294,6 +298,7 @@
 			isa = PBXGroup;
 			children = (
 				4A7F3A8A276EED26005D361F /* Common */,
+				4A7F3A8D276EEF38005D361F /* PhotoService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -302,6 +307,7 @@
 			isa = PBXGroup;
 			children = (
 				4A7F3A8B276EED3B005D361F /* ServiceProvider.swift */,
+				4A7F3A8F276EEF70005D361F /* BaseService.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -492,6 +498,7 @@
 				4A7F3A88276EEBB2005D361F /* API+Key.swift in Sources */,
 				4A7F3A70276E4DEE005D361F /* PhotoViewReactor.swift in Sources */,
 				4A7F3A7F276EE622005D361F /* RxViewController.swift in Sources */,
+				4A7F3A90276EEF70005D361F /* BaseService.swift in Sources */,
 				4A7F3A23276E49ED005D361F /* AppDelegate.swift in Sources */,
 				4A7F3A79276EE0A8005D361F /* PhotoSection.swift in Sources */,
 				4A7F3A75276EDD4D005D361F /* PhotoCell.swift in Sources */,
@@ -500,6 +507,7 @@
 				4A7F3A8C276EED3B005D361F /* ServiceProvider.swift in Sources */,
 				4A7F3A62276E4B32005D361F /* UnsplashAPI.swift in Sources */,
 				4A7F3A63276E4B32005D361F /* UnsplashAPI+Task.swift in Sources */,
+				4A7F3A8E276EEF38005D361F /* PhotoService.swift in Sources */,
 				4A7F3A69276E4C3E005D361F /* PhotoRequest.swift in Sources */,
 				4A7F3A66276E4B32005D361F /* UnsplashAPI+Path.swift in Sources */,
 				4A7F3A7B276EE0D8005D361F /* Photo.swift in Sources */,
