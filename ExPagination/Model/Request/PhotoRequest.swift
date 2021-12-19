@@ -9,7 +9,7 @@ import Foundation
 
 struct PhotoRequest: ModelType {
   let page: Int
-  var perPage: Int = 10
+  let perPage: Int = 30
   
   enum CodingKeys: String, CodingKey {
     case page
