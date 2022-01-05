@@ -97,7 +97,8 @@ class PhotoViewController: BaseViewController, ReactorKit.View {
     }
     
     self.photoCollectionView.rx.prefetchItems
-      .throttle(.milliseconds(200), scheduler: MainScheduler.asyncInstance)
+      .throttle(.seconds(1), scheduler: MainScheduler.asyncInstance)
+      .observe(on: MainScheduler.asyncInstance)
       .asObservable()
       .map(dataSource.items(at:))
       .map(Reactor.Action.prefetchItems)
