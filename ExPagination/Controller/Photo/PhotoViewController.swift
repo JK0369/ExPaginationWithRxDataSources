@@ -96,6 +96,26 @@ class PhotoViewController: BaseViewController, ReactorKit.View {
       }
     }
     
+    self.photoCollectionView.rx.prefetchItems
+      .throttle(.milliseconds(200), scheduler: MainScheduler.asyncInstance)
+      .asObservable()
+      .map(dataSource.items(at:))
+      .map(Reactor.Action.prefetchItems)
+      .bind(to: reactor.action)
+      .disposed(by: disposeBag)
+    
+    self.photoCollectionView.rx.didScroll
+      .withLatestFrom(self.photoCollectionView.rx.contentOffset)
+      .map { [weak self] in
+        Reactor.Action.pagination(
+          contentHeight: self?.photoCollectionView.contentSize.height ?? 0,
+          contentOffsetY: $0.y,
+          scrollViewHeight: UIScreen.main.bounds.height
+        )
+      }
+      .bind(to: reactor.action)
+      .disposed(by: disposeBag)
+    
     reactor.state.map(\.photoSection)
       .distinctUntilChanged()
       .map(Array.init(with:))
