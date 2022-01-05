@@ -36,6 +36,7 @@
 		4A7F3A8C276EED3B005D361F /* ServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7F3A8B276EED3B005D361F /* ServiceProvider.swift */; };
 		4A7F3A8E276EEF38005D361F /* PhotoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7F3A8D276EEF38005D361F /* PhotoService.swift */; };
 		4A7F3A90276EEF70005D361F /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7F3A8F276EEF70005D361F /* BaseService.swift */; };
+		C67D87D52785602C001073F4 /* ItemIndexable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67D87D42785602C001073F4 /* ItemIndexable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +92,7 @@
 		4A7F3A8F276EEF70005D361F /* BaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
 		6008C54CCB7B20960F118949 /* Pods-ExPagination.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExPagination.debug.xcconfig"; path = "Target Support Files/Pods-ExPagination/Pods-ExPagination.debug.xcconfig"; sourceTree = "<group>"; };
 		BFD0CCEEA56A1055CC6C41FD /* Pods-ExPagination.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExPagination.release.xcconfig"; path = "Target Support Files/Pods-ExPagination/Pods-ExPagination.release.xcconfig"; sourceTree = "<group>"; };
+		C67D87D42785602C001073F4 /* ItemIndexable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemIndexable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -230,6 +232,7 @@
 			children = (
 				4A7F3A7C276EE60F005D361F /* Extension */,
 				4A7F3A80276EE91B005D361F /* UIImageView.swift */,
+				C67D87D42785602C001073F4 /* ItemIndexable.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -495,6 +498,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A7F3A6B276E4C43005D361F /* ModelType.swift in Sources */,
+				C67D87D52785602C001073F4 /* ItemIndexable.swift in Sources */,
 				4A7F3A88276EEBB2005D361F /* API+Key.swift in Sources */,
 				4A7F3A70276E4DEE005D361F /* PhotoViewReactor.swift in Sources */,
 				4A7F3A7F276EE622005D361F /* RxViewController.swift in Sources */,
